@@ -1,0 +1,271 @@
+/* Estilo general para el body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el header */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Nombre de usuario */
+.header .user-name {
+    font-size: 18px;
+}
+.btn-agregar{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.divagre{
+    width: 80%;
+    margin: auto;
+}
+/* Botón de cerrar sesión */
+.header .logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-right: 5%;
+}
+
+.header .logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    margin-top: 80px; /* Espacio suficiente para no ocultar el contenido bajo el header */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general para la tabla */
+.expense-table {
+    width: 81%; /* La tabla ocupará el 80% del ancho disponible */
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: auto;  /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+    table-layout: fixed;  /* Esto hace que las celdas tengan un tamaño uniforme */
+}
+
+/* Cabecera de la tabla */
+.expense-table th {
+    padding: 16px;  /* Aumentar el padding para que sea más espacioso */
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+}
+
+/* Estilo para las celdas */
+.expense-table td {
+    padding: 16px;  /* Aumentar el padding para mayor separación */
+    border: 1px solid #ddd;
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
+}
+
+/* Fila alternada para la tabla */
+.expense-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo de los botones (editar y eliminar) */
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Íconos de los botones */
+button i {
+    font-size: 20px;
+    color: #4CAF50;
+    transition: color 0.3s ease;
+}
+
+button i:hover {
+    color: #45a049;
+}
+
+button.delete-btn i {
+    color: #f44336;
+}
+
+button.delete-btn i:hover {
+    color: #d32f2f;
+}
+
+/* Estilo para el presupuesto restante */
+.budget-remaining {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo de los inputs dentro del modal */
+.modal-content input,
+.modal-content textarea {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+modal-content
+
+/* Botones de agregar y actualizar */
+button.add-update-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button.add-update-btn:hover {
+    background-color: #45a049;
+}
+.agre-btn{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+}
+.expand-btn{
+    background-color: rgb(176, 176, 21);
+    color: white;
+    border: none;
+    padding: 10px 11px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+/* Modal styles */
+.modal {
+    display: none; /* Ocultamos el modal por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Aseguramos que el modal esté por encima de otros elementos */
+}
+
+.modal.open {
+    display: flex; /* Mostramos el modal cuando la clase 'open' esté presente */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2{
+    text-align: center;
+}
+.total-expenses{
+    width: 80%;
+    margin: auto;
+}
+.a1 {
+    width: 51%;
+    margin: auto;
+    display: inline-block;
+}
+.a2 {
+    width: 30%;
+    display: inline-block;
+}
+
+.close-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+.pagination-btn {
+    border: 2px solid black;  /* Aquí defines un borde de 2 píxeles de grosor y color negro */
+}
+
